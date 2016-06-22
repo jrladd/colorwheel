@@ -21,16 +21,19 @@ def all_hyponyms(synset):
     all_words = [a.replace("_"," ") for a in all_words]
     return all_words
 
-colors = {}
-for h in wn.synset('chromatic_color.n.01').hyponyms():
-    colors[h.lemmas()[0].name()] = [l.name() for l in h.lemmas()]
-    colors[h.lemmas()[0].name()].extend(all_hyponyms(h)) 
-for h in wn.synset('achromatic_color.n.01').hyponyms():
-    colors[h.lemmas()[0].name()] = [l.name() for l in h.lemmas()]
-    colors[h.lemmas()[0].name()].extend(all_hyponyms(h)) 
+def get_colors():
+    colors = {}
+    for h in wn.synset('chromatic_color.n.01').hyponyms():
+        colors[h.lemmas()[0].name()] = [l.name() for l in h.lemmas()]
+        colors[h.lemmas()[0].name()].extend(all_hyponyms(h)) 
+    for h in wn.synset('achromatic_color.n.01').hyponyms():
+        colors[h.lemmas()[0].name()] = [l.name() for l in h.lemmas()]
+        colors[h.lemmas()[0].name()].extend(all_hyponyms(h)) 
+    return colors
 
-
-search_terms = {k: [re.compile('\\b'+c+'\\b') for c in v] for k,v in colors.items()}
+colors = get_colors()
+stop_colors = ['rose', 'buff', 'fawn', 'hazel']
+search_terms = {k: [re.compile('\\b'+c+'\\b') for c in v if c not in stop_colors] for k,v in colors.items() if k != 'olive'}
 
 files = glob.glob('../data/fq*.txt')
 
@@ -52,15 +55,7 @@ for fq in files:
                             color_lines[k].append(line)
 
     color_lines = {k: list(set(v)) for k,v in color_lines.items()}
-    all_files['Book '+fq[2:-4]] = color_lines
+    all_files['Book '+fq[10:-4]] = color_lines
 
-final_dict = []
-for k,v in all_files.items():
-    text = {}
-    for key,val in v.items():
-        text['text'] = k
-        text['color'] = key
-        text['sentences'] = val
-
-with codecs.open('../data/colors.json', 'w', 'utf8') as outfile:
-    json.dump(final_dict, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
+with codecs.open('../data/line_data.json', 'w', 'utf8') as outfile:
+    json.dump(all_files, outfile, sort_keys = True, indent = 4, ensure_ascii = False)

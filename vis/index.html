@@ -17,6 +17,7 @@
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
+//This code adapted from Mike Bostock's Dispatching Events example: https://bl.ocks.org/mbostock/5872848
 
 var dispatch = d3.dispatch("load", "statechange");
 
@@ -24,10 +25,8 @@ var groups = [
   "red",
   "yellow",
   "green",
-  "olive",
   "blue",
   "purple",
-  "pink",
   "white",
   "black",
   "gray",
@@ -120,7 +119,7 @@ dispatch.on("load.pie", function(textById) {
 
   var color = d3.scale.ordinal()
       .domain(groups)
-      .range(["#AA1100", "#FFBB11", "#55AA00", "#556B2F", "#0000FF", "#4B0082", "#C77DF3", "#FAFAFA", "#000000", "#C0C0C0", "#884513"]);
+      .range(["#AA1100", "#FFBB11", "#55AA00", "#0000FF", "#4B0082", "#FAFAFA", "#000000", "#C0C0C0", "#884513"]);
 
   var arc = d3.svg.arc()
       .outerRadius(radius - 10)
