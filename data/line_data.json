@@ -606,5 +606,68 @@
             "Hayling that maiden by the yellow hear,", 
             "They did esteem, and offered store of gold."
         ]
+    }, 
+    "Midsummer": {
+        "black": [
+            "Oh grim-looked night! Oh night with hue so black!", 
+            "\tBeetles black, approach not near.", 
+            "And must for aye consort with black-browed night.", 
+            "With drooping fog as black as Acheron,", 
+            "[He sings.]\tThe ouzel cock, so black of hue,"
+        ], 
+        "gray": [
+            "Her silver visage in the watery glass,", 
+            "For if but once thou show me thy grey light,", 
+            "\t   The plainsong cuckoo grey,", 
+            "And then the moon, Like to a silver bow"
+        ], 
+        "green": [
+            "When wheat is green, when hawthorn buds appear.", 
+            "And the quaint mazes in the wanton green,", 
+            "And now they never meet in grove or green,", 
+            "With purple grapes, green figs, and mulberries;", 
+            "The plowman lost his sweat, and the green corn", 
+            "\tTo Due her orbs upon the green.", 
+            "\t   His eyes were green as leeks.", 
+            "Turns into yellow gold his salt-green streams.", 
+            "place for our rehearsal. This green plot shall be"
+        ], 
+        "orange": [
+            "\t   With orange-tawny bill,", 
+            "beard, your orange-tawny beard, your purple-in-grain"
+        ], 
+        "purple": [
+            "Where oxlips and the nodding violet grows,", 
+            "Before, milk-white, now purple with love's wound,", 
+            "beard, your orange-tawny beard, your purple-in-grain", 
+            "With purple grapes, green figs, and mulberries;", 
+            "\tFlower of this purple die,"
+        ], 
+        "red": [
+            "Like to a double cherry, seeming parted,", 
+            "Fallen in the fresh lap of the crimson rose,", 
+            "\t      This cherry nose,", 
+            "\tOf colour Like the red rose on triumphant brier,", 
+            "your weapons in your hand and kill me a red-hipped", 
+            "Even till the eastern gate, all fiery red,", 
+            "My cherry lips have often kissed thy stones,"
+        ], 
+        "white": [
+            "That pure congealed white, high Taurus' snow,", 
+            "\tMost radiant Pyramus, most lily-white of hue,", 
+            "Before, milk-white, now purple with love's wound,", 
+            "And hang a pearl in every cowslip's ear.", 
+            "Decking with liquid pearl the bladed grass", 
+            "This princess of pure white, this seal of bliss!"
+        ], 
+        "yellow": [
+            "When wheat is green, when hawthorn buds appear.", 
+            "\t   These yellow cowslip cheeks", 
+            "And sat with me on Neptune's yellow sands,", 
+            "your perfect yellow.", 
+            "BOTTOM  I will discharge it in either your straw-colour", 
+            "\tIn their gold coats spots you see;", 
+            "Turns into yellow gold his salt-green streams."
+        ]
     }
 }

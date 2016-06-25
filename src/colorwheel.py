@@ -35,7 +35,7 @@ colors = get_colors()
 stop_colors = ['rose', 'buff', 'fawn', 'hazel']
 search_terms = {k: [re.compile('\\b'+c+'\\b') for c in v if c not in stop_colors] for k,v in colors.items() if k != 'olive'}
 
-files = glob.glob('../data/fq*.txt')
+files = glob.glob('../data/*.txt')
 
 print files 
 
