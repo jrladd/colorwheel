@@ -32,7 +32,7 @@ def get_colors():
     return colors
 
 colors = get_colors()
-stop_colors = ['rose', 'buff', 'fawn', 'hazel']
+stop_colors = ['rose', 'buff', 'fawn', 'hazel', 'wine', 'cherry']
 search_terms = {k: [re.compile('\\b'+c+'\\b') for c in v if c not in stop_colors] for k,v in colors.items() if k != 'olive'}
 
 files = glob.glob('../data/*.txt')
@@ -50,12 +50,12 @@ for fq in files:
                 for c in v:
                     if c.search(line) != None:
                         if k not in color_lines:
-                            color_lines[k] = [line]
+                            color_lines[k] = [c.sub("<span class='"+k+"'>"+c.search(line).group(0)+"</span>", line)]
                         else:
-                            color_lines[k].append(line)
+                            color_lines[k].append(c.sub("<span class='"+k+"'>"+c.search(line).group(0)+"</span>", line))
 
     color_lines = {k: list(set(v)) for k,v in color_lines.items()}
     all_files['Book '+fq[10:-4]] = color_lines
 
-with codecs.open('../data/line_data.json', 'w', 'utf8') as outfile:
+with codecs.open('../vis/line_data.json', 'w', 'utf8') as outfile:
     json.dump(all_files, outfile, sort_keys = True, indent = 4, ensure_ascii = False)

@@ -12,6 +12,20 @@
   stroke: #000;
   shape-rendering: crispEdges;
 }
+span.red {color: #AA1100; font-weight: bold; }
+span.yellow {color: #FFBB11; font-weight: bold; }
+span.green {color: #55AA00; font-weight: bold; }
+span.blue {color: #0000FF; font-weight: bold; }
+span.purple {color: #4B0082; font-weight: bold; }
+span.white {color: #FAFAFA;    
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;}
+span.black {color: #000000; font-weight: bold; }
+span.gray {color: #C0C0C0; font-weight: bold; }
+span.brown {color: #884513; font-weight: bold; }
 
 </style>
 <body>
@@ -155,7 +169,6 @@ dispatch.on("load.pie", function(textById) {
 
 dispatch.on("load.poem", function(textById, texts) {
 
-	console.log();
 	var poem = d3.select("body").append("div")
 		.data(textById.values())
 		.attr("class", "poem")
@@ -163,19 +176,32 @@ dispatch.on("load.poem", function(textById, texts) {
 			d3.select(this).selectAll("div")
 			.data(groups)
 			.enter().append("div")
-			.attr("class", "line")
-			.text(function(g) { return d['lines'][g][Math.floor(Math.random() * d['lines'][g].length)]; } );
+			.attr( "class", function(c) { return c+" lines"; })
+			.each( function(c) {
+				d3.select(this).selectAll("div")
+				.data(d['lines'][c])
+				.enter().append("div")
+				.attr("class", c+" line")
+				.html(function(g) { return g; } );
 
+			});
 		});
 
 	dispatch.on("statechange.poem", function(text) {
-		d3.selectAll("div.line")
-		.data(groups)
-		.text(function (g) {return text['lines'][g][Math.floor(Math.random() * text['lines'][g].length)]; } );
+		d3.selectAll("div.lines")
+			.data(groups)
+			.each( function(c) {
+				var newlines = d3.select(this).selectAll("div")
+					.data(text['lines'][c]);
+				newlines.enter().append("div")
+					.attr("class", c+" line")
+					.html(function(g) {return g;});
+				newlines.exit().remove();
+				newlines.html(function(g) {return g;});
+			});
 	});	
 });
 
-// Coerce population counts to numbers and compute total per text.
 function type(d) {
   d.total = d3.sum(groups, function(k) { return d[k] = +d[k]; });
   return d;
