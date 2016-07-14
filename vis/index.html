@@ -12,6 +12,8 @@
   stroke: #000;
   shape-rendering: crispEdges;
 }
+div.lines {display: none;}
+div.line {display: none;}
 span.red {color: #AA1100; font-weight: bold; }
 span.yellow {color: #FFBB11; font-weight: bold; }
 span.green {color: #55AA00; font-weight: bold; }
@@ -154,7 +156,7 @@ dispatch.on("load.pie", function(textById) {
     .enter().append("path")
       .style("fill", color)
       .attr("class", function(d) { return d; } )
-      .on("click", function(d) { d3.select('div.'+d['data']).remove(); } )
+      .on("click", function(d) { $('div.'+d['data']).toggle(); } )
       .each(function() { this._current = {startAngle: 0, endAngle: 0}; });
 
   dispatch.on("statechange.pie", function(d) {
