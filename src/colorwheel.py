@@ -55,7 +55,10 @@ for fq in files:
                             color_lines[k].append(c.sub("<span class='"+k+"'>"+c.search(line).group(0)+"</span>", line))
 
     color_lines = {k: list(set(v)) for k,v in color_lines.items()}
+    #color_lines['id'] = 'Book '+fq[10:-4]
     all_files['Book '+fq[10:-4]] = color_lines
+
+
 
 with codecs.open('../vis/line_data.json', 'w', 'utf8') as outfile:
     json.dump(all_files, outfile, sort_keys = True, indent = 4, ensure_ascii = False)

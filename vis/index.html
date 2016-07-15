@@ -12,8 +12,8 @@
   stroke: #000;
   shape-rendering: crispEdges;
 }
-div.lines {display: none;}
-div.line {display: none;}
+.col1 {width: 600px; position: fixed;}
+.col2 {width: 350px; float: right;}
 span.red {color: #AA1100; font-weight: bold; }
 span.yellow {color: #FFBB11; font-weight: bold; }
 span.green {color: #55AA00; font-weight: bold; }
@@ -31,6 +31,8 @@ span.brown {color: #884513; font-weight: bold; }
 
 </style>
 <body>
+	<div class="col1"></div>
+	<div class="col2"></div>
 <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
@@ -72,7 +74,7 @@ d3.json('line_data.json', function(error, texts) {
 
 // A drop-down menu for selecting a text; uses the "menu" namespace.
 dispatch.on("load.menu", function(textById) {
-  var select = d3.select("body")
+  var select = d3.select(".col1")
     .append("div")
     .append("select")
       .on("change", function() { dispatch.statechange(textById.get(this.value)); });
@@ -104,7 +106,7 @@ dispatch.on("load.bar", function(textById) {
       .orient("left")
       .tickFormat(d3.format(".2s"));
 
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select(".col1").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -130,7 +132,7 @@ dispatch.on("load.bar", function(textById) {
 
 // A pie chart to show population by age group; uses the "pie" namespace.
 dispatch.on("load.pie", function(textById) {
-  var width = 880,
+  var width = 480,
       height = 460,
       radius = Math.min(width, height) / 2;
 
@@ -145,7 +147,7 @@ dispatch.on("load.pie", function(textById) {
   var pie = d3.layout.pie()
       .sort(null);
 
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select(".col1").append("svg")
       .attr("width", width)
       .attr("height", height)
     .append("g")
@@ -158,6 +160,15 @@ dispatch.on("load.pie", function(textById) {
       .attr("class", function(d) { return d; } )
       .each(function() { this._current = {startAngle: 0, endAngle: 0}; });
 
+  svg.append("text")
+	  .text("Shuffle")
+	  .attr('transform', 'translate(' + -17 + "," + 10 + ")")
+	  .on("click", function() {
+		  d3.selectAll("div.line").sort(function(a,b) {
+			  return d3.ascending(Math.random(), Math.random());
+		  }).transition().duration(500).style('top', function(d, i) { return 60 + ((i*30)) + "px"; } );
+	  });
+
   dispatch.on("statechange.pie", function(d) {
     path.data(pie.value(function(g) { return d[g]; })(groups)).transition()
         .attrTween("d", function(d) {
@@ -168,17 +179,23 @@ dispatch.on("load.pie", function(textById) {
           };
         });
     path.on("click", function(c) { 
-	      d3.select('body').select('div') 
-		      .data(d)
-		      .attr('class','poem')
-		      var lines = d3.select('div').selectAll('div')
-		      	.data(d['lines'][c['data']]);
-	     	      lines.enter().append('div')
-		      	.attr('class', c['data'])
-		      	.html( function(l) {return l;});
-		      lines.exit().remove();
-		      lines.html( function(l) {return l;});
-      		      
+	d3.select('div.col2').append('div')
+		.data(d['lines'][c['data']])
+		.attr('class', c['data'])
+		.each( function() {
+		var lines = d3.select('div.'+c['data']).selectAll('div')
+			.data(d['lines'][c['data']]);	
+		lines.enter().append('div')
+			.attr('class', c['data'])
+			.attr('class', 'line')
+			.style('top', function(d, i) { return 60 + ((i*30)) + "px"; } )
+			.html( function(l) {return l;});
+		lines.exit().remove();
+		lines.html( function(l) {return l;})
+		        .attr('class', c['data'])
+			.attr('class', 'line')
+			.style('top', function(d, i) { return 60 + ((i*30)) + "px"; } );
+		});
       });
   });
 });
