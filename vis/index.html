@@ -156,7 +156,6 @@ dispatch.on("load.pie", function(textById) {
     .enter().append("path")
       .style("fill", color)
       .attr("class", function(d) { return d; } )
-      .on("click", function(d) { $('div.'+d['data']).toggle(); } )
       .each(function() { this._current = {startAngle: 0, endAngle: 0}; });
 
   dispatch.on("statechange.pie", function(d) {
@@ -168,53 +167,26 @@ dispatch.on("load.pie", function(textById) {
             return arc(interpolate(t));
           };
         });
+    path.on("click", function(c) { 
+	      d3.select('body').select('div') 
+		      .data(d)
+		      .attr('class','poem')
+		      var lines = d3.select('div').selectAll('div')
+		      	.data(d['lines'][c['data']]);
+	     	      lines.enter().append('div')
+		      	.attr('class', c['data'])
+		      	.html( function(l) {return l;});
+		      lines.exit().remove();
+		      lines.html( function(l) {return l;});
+      		      
+      });
   });
 });
 
-dispatch.on("load.poem", function(textById, texts) {
-
-	var poem = d3.select("body").append("div")
-		.data(textById.values())
-		.attr("class", "poem")
-		.each(function (d) {
-			d3.select(this).selectAll("div")
-			.data(groups)
-			.enter().append("div")
-			.attr( "class", function(c) { return c+" lines"; })
-			.each( function(c) {
-				d3.select(this).selectAll("div")
-				.data(d['lines'][c])
-				.enter().append("div")
-				.attr("class", c+" line")
-				.html(function(g) { return g; } );
-
-			});
-		});
-
-	dispatch.on("statechange.poem", function(text) {
-		d3.selectAll("div.lines")
-			.data(groups)
-			.each( function(c) {
-				var newlines = d3.select(this).selectAll("div")
-					.data(text['lines'][c]);
-				newlines.enter().append("div")
-					.attr("class", c+" line")
-					.html(function(g) {return g;});
-				newlines.exit().remove();
-				newlines.html(function(g) {return g;});
-			});
-	});	
-});
 
 function type(d) {
   d.total = d3.sum(groups, function(k) { return d[k] = +d[k]; });
   return d;
 }
-
-//$(function () {
-//	$('path.red').click( function () {
-//		$('div.red').toggle();
-//	});
-//});
 
 </script>
