@@ -24,6 +24,7 @@ text {
 }
 .col1 {width: 600px; float: left;}
 .col2 {width: 400px; float: left;}
+.line {position: absolute;}
 span.red {color: #AA1100; font-weight: bold; }
 span.yellow {color: #FFBB11; font-weight: bold; }
 span.green {color: #55AA00; font-weight: bold; }
@@ -178,12 +179,11 @@ dispatch.on("load.pie", function(textById) {
 	  .on("click", function() {
 		  d3.selectAll("div.line").sort(function(a,b) {
 			  return d3.ascending(Math.random(), Math.random());
-		  }).transition().duration(500).style('top', function(d, i) { return 60 + ((i*30)) + "px"; } );
+		  }).transition().duration(500).style('top', function(d, i) { return 10 + ((i*20)) + "px"; } );
 	  });
 
   svg.append('text')
   	  .text('Clear')
-	  .attr('fill', 'green')
 	  .attr('text-anchor', 'middle')
 	  .attr('transform', 'translate('+ 0 + "," + 30 + ")")
 	  .on("click", function() {
@@ -200,12 +200,19 @@ dispatch.on("load.pie", function(textById) {
           };
         });
     path.on("click", function(c) { 
-		var lines = d3.select('div.col2').selectAll('div')
-			.data(d['lines'][c['data']], function(d) {return d;});	
-		lines.enter().append('div')
+		var lines = d3.select('div.col2').selectAll('div.line')
+			.data(d['lines'][c['data']], function(d) {return d;})	
+			.enter().append('div')
 			.attr('class', c['data']+' line')
-			.style('top', function(d, i) { return 60 + ((i*30)) + "px"; } )
-			.html( function(l) {return l;});
+		//	.style('top', function(d, i) { return 10 + ((i*30)) + "px"; } )
+			.html( function(d, i) {return d;})
+
+		d3.selectAll('div.line').sort(function(a,b) {
+			  return d3.ascending(Math.random(), Math.random());
+		  })
+			.transition().duration(500)
+			.style('top', function(d, i) { return 10 + ((i*20)) + "px"; } );
+
 		//lines.exit().remove();
 		//lines.html( function(l) {return l;})
 		        //.attr('class', c['data'])
