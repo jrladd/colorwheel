@@ -102,7 +102,7 @@ dispatch.on("load.menu", function(textById) {
   });
 });
 
-// A bar chart to show total population; uses the "bar" namespace.
+// A bar chart to show total color usage; uses the "bar" namespace.
 dispatch.on("load.bar", function(textById) {
   var margin = {top: 20, right: 20, bottom: 30, left: 40},
       width = 80 - margin.left - margin.right,
@@ -142,7 +142,7 @@ dispatch.on("load.bar", function(textById) {
   });
 });
 
-// A pie chart to show population by age group; uses the "pie" namespace.
+// A pie chart to show number of lines by color; uses the "pie" namespace.
 dispatch.on("load.pie", function(textById) {
   var width = 480,
       height = 460,
@@ -199,6 +199,7 @@ dispatch.on("load.pie", function(textById) {
             return arc(interpolate(t));
           };
         });
+    /* On click, show all lines for that color. Transition and random sort on subsequent clicks. */
     path.on("click", function(c) { 
 		var lines = d3.select('div.col2').selectAll('div.line')
 			.data(d['lines'][c['data']], function(d) {return d;})	
@@ -213,11 +214,6 @@ dispatch.on("load.pie", function(textById) {
 			.transition().duration(500)
 			.style('top', function(d, i) { return 10 + ((i*20)) + "px"; } );
 
-		//lines.exit().remove();
-		//lines.html( function(l) {return l;})
-		        //.attr('class', c['data'])
-			//.attr('class', 'line')
-			//.style('top', function(d, i) { return 60 + ((i*30)) + "px"; } );
       });
   });
 });

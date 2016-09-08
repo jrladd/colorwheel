@@ -67,11 +67,8 @@ for fq in files:
     #color_lines['id'] = 'Book '+fq[10:-4]
     all_files['Book '+fq[10:-4]] = color_lines
 
-<<<<<<< d49c56f2e2248a8ad5330da57b4955bbb48b597f
 
 
-=======
 # Put master dictionary in a JSON file for use by D3 code.
->>>>>>> documented colorwheel.py
 with codecs.open('../vis/line_data.json', 'w', 'utf8') as outfile:
     json.dump(all_files, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
