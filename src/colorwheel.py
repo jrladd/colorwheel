@@ -4,6 +4,7 @@ import regularize as reg
 import sys, codecs, re, glob, json
 from nltk.corpus import wordnet as wn
 
+# Two functions for recursing down WordNet's tree of hyponyms
 def _recurse_all_hyponyms(synset, all_hyponyms):
     synset_hyponyms = synset.hyponyms()
     if synset_hyponyms:
@@ -22,6 +23,11 @@ def all_hyponyms(synset):
     return all_words
 
 def get_colors():
+    """
+    Uses the two functions above to recurse through hyponyms for "chromatic color"
+    and "achromatic color," yielding a dictionary with basic color terms as keys and
+    a list of related terms as values.
+    """
     colors = {}
     for h in wn.synset('chromatic_color.n.01').hyponyms():
         colors[h.lemmas()[0].name()] = [l.name() for l in h.lemmas()]
@@ -32,10 +38,12 @@ def get_colors():
     return colors
 
 colors = get_colors()
-stop_colors = ['rose', 'buff', 'fawn', 'hazel', 'wine', 'cherry']
+stop_colors = ['rose', 'buff', 'fawn', 'hazel', 'wine', 'cherry'] # A list of colors not to use.
+
+# Create a dictionary where the keys remain the same but the values are changed to regex.
 search_terms = {k: [re.compile('\\b'+c+'\\b') for c in v if c not in stop_colors] for k,v in colors.items() if k != 'olive'}
 
-files = glob.glob('../data/*.txt')
+files = glob.glob('../data/*.txt') # Get all files.
 
 print files 
 
@@ -44,9 +52,9 @@ for fq in files:
     color_lines = {}
     with codecs.open(fq, 'r', 'utf8') as f:
         for line in f:
-            line = reg.modernize(line.strip(' \n\r'))
-            line = re.sub(r'\xa0+', '', line)
-            for k,v in search_terms.items():
+            line = reg.modernize(line.strip(' \n\r')) # Modernize spelling in each line
+            line = re.sub(r'\xa0+', '', line) # Remove pesky special character.
+            for k,v in search_terms.items(): # Iterate through search terms, looking for any terms in a line.
                 for c in v:
                     if c.search(line) != None:
                         if k not in color_lines:
@@ -54,11 +62,16 @@ for fq in files:
                         else:
                             color_lines[k].append(c.sub("<span class='"+k+"'>"+c.search(line).group(0)+"</span>", line))
 
+    # For each Book of FQ, create a dictionary with basic color terms as keys and values of a list of lines that include that color.
     color_lines = {k: list(set(v)) for k,v in color_lines.items()}
     #color_lines['id'] = 'Book '+fq[10:-4]
     all_files['Book '+fq[10:-4]] = color_lines
 
+<<<<<<< d49c56f2e2248a8ad5330da57b4955bbb48b597f
 
 
+=======
+# Put master dictionary in a JSON file for use by D3 code.
+>>>>>>> documented colorwheel.py
 with codecs.open('../vis/line_data.json', 'w', 'utf8') as outfile:
     json.dump(all_files, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
