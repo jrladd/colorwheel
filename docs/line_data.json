@@ -598,65 +598,73 @@
             "Pinckt upon <span class='yellow'>gold</span>, and paled partly per partly,"
         ]
     }, 
-    "Midsummer": {
+    "Calender": {
         "black": [
-            "\tBeetles <span class='black'>black</span>, approach not near.", 
-            "[He sings.]\tThe ouzel cock, so <span class='black'>black</span> of hue,", 
-            "And must for aye consort with <span class='black'>black</span>-browed night.", 
-            "Oh grim-looked night! Oh night with hue so <span class='black'>black</span>!", 
-            "With drooping fog as <span class='black'>black</span> as Acheron,"
+            "Her mantle <span class='black'>black</span> through heaven gan overhaile.", 
+            "To quite it from the <span class='black'>black</span> bower of sorrow.", 
+            "The blue in <span class='black'>black</span>, the green in grey is tinct,", 
+            "Here no night Ravene lodge more <span class='black'>black</span> then pitch,"
+        ], 
+        "blue": [
+            "The <span class='blue'>blue</span> in black, the green in grey is tinct,"
+        ], 
+        "brown": [
+            "And helms unbruzed wexen daily <span class='brown'>brown</span>."
         ], 
         "gray": [
-            "Her <span class='gray'>silver</span> visage in the watery glass,", 
-            "And then the moon, Like to a <span class='gray'>silver</span> bow", 
-            "\t   The plainsong cuckoo <span class='gray'>grey</span>,", 
-            "For if but once thou show me thy <span class='gray'>grey</span> light,"
+            "heigh ho <span class='gray'>grey</span> is greet,", 
+            "The blue in black, the green in <span class='gray'>grey</span> is tinct,", 
+            "The <span class='gray'>silver</span> suvanne does sing before her dying day", 
+            "Well decked in a frock of <span class='gray'>grey</span>,", 
+            "And <span class='gray'>silver</span> bow, which was but slack,", 
+            "She home return, whose voices <span class='gray'>silver</span> found", 
+            "Run after hastily thy <span class='gray'>silver</span> found.", 
+            "Of fair Elisa be your <span class='gray'>silver</span> song,", 
+            "Show thy self Cyntbia with thy <span class='gray'>silver</span> rays,", 
+            "But now the <span class='gray'>grey</span> moss marred his rind,", 
+            "Or as Dame Cynthia's <span class='gray'>silver</span> ray"
         ], 
         "green": [
-            "When wheat is <span class='green'>green</span>, when hawthorn buds appear.", 
-            "\tTo Due her orbs upon the <span class='green'>green</span>.", 
-            "place for our rehearsal. This <span class='green'>green</span> plot shall be", 
-            "The plowman lost his sweat, and the <span class='green'>green</span> corn", 
-            "With purple grapes, <span class='green'>green</span> figs, and mulberries;", 
-            "\t   His eyes were <span class='green'>green</span> as leeks.", 
-            "Turns into yellow gold his salt-<span class='green'>green</span> streams.", 
-            "And now they never meet in grove or <span class='green'>green</span>,", 
-            "And the quaint mazes in the wanton <span class='green'>green</span>,"
-        ], 
-        "orange": [
-            "beard, your <span class='orange'>orange</span>-tawny beard, your purple-in-grain", 
-            "\t   With <span class='orange'>orange</span>-tawny bill,"
+            "Alike as others, girded in gawdy <span class='green'>green</span>?", 
+            "See, where she sits upon the grassy <span class='green'>green</span>,", 
+            "With <span class='green'>green</span> leaves, the bushes with blooming Buds.", 
+            "And Primroses <span class='green'>green</span>", 
+            "Yode forth abroad unto the <span class='green'>green</span> wood,", 
+            "The fields ay fresh, the grass ay <span class='green'>green</span>:", 
+            "And crowing in pipes made of <span class='green'>green</span> corn,", 
+            "Though to the <span class='green'>green</span> Wood they speeden hem all,", 
+            "The blue in black, the <span class='green'>green</span> in grey is tinct,", 
+            "The Muses, that were wont <span class='green'>green</span> bays to wear,", 
+            "There grew and aged Tree on the <span class='green'>green</span>,", 
+            "Harken awhile from thy <span class='green'>green</span> cabinet,", 
+            "She might ne gang on the <span class='green'>green</span>,", 
+            "You shepherd's daughters, that dwell on the <span class='green'>green</span>,", 
+            "And in a Kirtle of <span class='green'>green</span> say,", 
+            "With Leaves engrained in lusty <span class='green'>green</span>,", 
+            "But were thy years <span class='green'>green</span>, as now be mine,", 
+            "the <span class='green'>green</span> is for maidens meet:"
         ], 
         "purple": [
-            "Before, milk-white, now <span class='purple'>purple</span> with love's wound,", 
-            "beard, your orange-tawny beard, your <span class='purple'>purple</span>-in-grain", 
-            "Where oxlips and the nodding <span class='purple'>violet</span> grows,", 
-            "\tFlower of this <span class='purple'>purple</span> die,", 
-            "With <span class='purple'>purple</span> grapes, green figs, and mulberries;"
+            "They be clad in <span class='purple'>purple</span> and pall, so hath their God them blessed,", 
+            "With wings of <span class='purple'>purple</span> and blew.", 
+            "Bring hither the Pincke and <span class='purple'>purple</span> Cullambine,"
         ], 
         "red": [
-            "Even till the eastern gate, all fiery <span class='red'>red</span>,", 
-            "Fallen in the fresh lap of the <span class='red'>crimson</span> rose,", 
-            "\tOf colour Like the <span class='red'>red</span> rose on triumphant brier,", 
-            "your weapons in your hand and kill me a <span class='red'>red</span>-hipped"
+            "And <span class='red'>scarlet</span> berries in Summer time?", 
+            "And when his honour has thee <span class='red'>red</span>,", 
+            "Died in Lily white, and Cremsin <span class='red'>red</span>,"
         ], 
         "white": [
-            "And hang a <span class='white'>pearl</span> in every cowslip's ear.", 
-            "Decking with liquid <span class='white'>pearl</span> the bladed grass", 
-            "\tMost radiant Pyramus, most lily-<span class='white'>white</span> of hue,", 
-            "This princess of pure <span class='white'>white</span>, this seal of bliss!", 
-            "That pure congealed <span class='white'>white</span>, high Taurus' snow,", 
-            "Before, milk-<span class='white'>white</span>, now purple with love's wound,"
+            "And Ermines <span class='white'>white</span>.", 
+            "Their <span class='white'>ivory</span> Luyts and Tamburins forgo:", 
+            "That weening his White head was <span class='white'>chalk</span>, a shell fish down let fly:", 
+            "That first the <span class='white'>white</span> bear to the stake did bring.", 
+            "Died in Lily <span class='white'>white</span>, and Cremsin red,"
         ], 
         "yellow": [
-            "Turns into yellow <span class='yellow'>gold</span> his salt-green streams.", 
-            "\tIn their <span class='yellow'>gold</span> coats spots you see;", 
-            "And sat with me on Neptune's <span class='yellow'>yellow</span> sands,", 
-            "When <span class='yellow'>wheat</span> is green, when hawthorn buds appear.", 
-            "your perfect <span class='yellow'>yellow</span>.", 
-            "Turns into <span class='yellow'>yellow</span> gold his salt-green streams.", 
-            "BOTTOM  I will discharge it in either your <span class='yellow'>straw</span>-colour", 
-            "\t   These <span class='yellow'>yellow</span> cowslip cheeks"
+            "And he that strives to touch the stars, oft stumbles at a <span class='yellow'>straw</span>,", 
+            "so you may buy <span class='yellow'>gold</span> to deer.", 
+            "Ygyrt with belts of glitterand <span class='yellow'>gold</span>. (might they good shepherds be)"
         ]
     }
 }
