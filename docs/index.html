@@ -75,8 +75,9 @@ span.brown {color: #884513; font-weight: bold; }
 
 	<div class="fl col1 w-50 relative"></div>
 	<div class="fl col2 w-50 fixed"></div>
-<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<!-- <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script> -->
 <script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://unpkg.com/underscore@1.9.1/underscore.js"></script>
 <script>
 /*This code adapted from Mike Bostock's Dispatching Events example: https://bl.ocks.org/mbostock/5872848*/
 
@@ -89,6 +90,24 @@ d3.select('.overlay').on("click", function() {
 	d3.select(this).classed("hide", true);
 })
 var dispatch = d3.dispatch("load", "statechange");
+
+// d3.select(".col2").append("div")
+// 	.text("Shuffle")
+// 	.style("top", "100px")
+// 	.classed("tc", true)
+// 	.on("click", function() {
+// 		d3.selectAll("div.line").sort(function(a,b) {
+// 			return d3.ascending(Math.random(), Math.random());
+// 		}).transition().duration(500).style('top', function(d, i) { return 130 + ((i*20)) + "px"; } );
+// 	});
+//
+// d3.select(".col2").append('div')
+// 		.text('Clear')
+// 	// .attr('text-anchor', 'middle')
+// 	// .attr('transform', 'translate('+ 0 + "," + 30 + ")")
+// 	.on("click", function() {
+// 		d3.selectAll("div.line").remove();
+// 	});
 
 var groups = [
   "red",
@@ -129,6 +148,7 @@ d3.json('line_data.json', function(error, texts) {
 
 // A pie chart to show number of lines by color; uses the "pie" namespace.
 const loadPie = (book, index) => {
+
   var width = 300,
       height = 300,
       radius = book.total;
@@ -144,9 +164,11 @@ const loadPie = (book, index) => {
   var pie = d3.layout.pie()
       .sort(null);
 
-  var svg = d3.select(".col1").append("div")
-		.classed("row"+index+" fl w-100", true)
-		.append("svg")
+  var container = d3.select(".col1").append("div")
+		.classed("row"+index+" fl w-100 tc mv3 i", true)
+	container.append("div").text(book.id);
+
+	var svg = container.append("svg")
       .attr("width", radius*2)
       .attr("height", radius*2)
     .append("g")
@@ -159,24 +181,6 @@ const loadPie = (book, index) => {
       .attr("class", function(d) { return d; } )
       .each(function() { this._current = {startAngle: 0, endAngle: 0}; });
 
-  // svg.append("text")
-	//   .text("Shuffle")
-	//   .attr('text-anchor', 'middle')
-	//   .attr('transform', 'translate(' + 0 + "," + -30 + ")")
-	//   .on("click", function() {
-	// 	  d3.selectAll("div.line").sort(function(a,b) {
-	// 		  return d3.ascending(Math.random(), Math.random());
-	// 	  }).transition().duration(500).style('top', function(d, i) { return 10 + ((i*20)) + "px"; } );
-	//   });
-	//
-  // svg.append('text')
-  // 	  .text('Clear')
-	//   .attr('text-anchor', 'middle')
-	//   .attr('transform', 'translate('+ 0 + "," + 30 + ")")
-	//   .on("click", function() {
-	// 	  d3.selectAll("div.line").remove();
-	//   });
-
   path.data(pie.value(function(g) { return book[g]; })(groups)).transition()
         .attrTween("d", function(d) {
           var interpolate = d3.interpolate(this._current, d);
@@ -188,8 +192,19 @@ const loadPie = (book, index) => {
 
     /* On click, show all lines for that color. Transition and random sort on subsequent clicks. */
     path.on("click", function(c) {
+			var current_lines = d3.selectAll('div.line')[0].map(function(d) {return d.__data__});
+			// .length;
+			console.log(current_lines);
+			var new_lines = book['lines'][c['data']]
+			var all_lines = current_lines.concat(new_lines);
+			var re = /class=\'(.*)\'/
+			var found = all_lines.map(function(a) { return a.match(re)[1]; });
+			console.log(_.countBy(found));
+			var random = _.sample(all_lines, 14)
+			// console.log(random);
+			d3.selectAll('div.line').remove();
 		var lines = d3.select('div.col2').selectAll('div.line')
-			.data(book['lines'][c['data']], function(d) {return d;})
+			.data(random, function(d) { return d; })
 			.enter().append('div')
 			.attr('class', 'line')
 		//	.style('top', function(d, i) { return 10 + ((i*30)) + "px"; } )
@@ -199,7 +214,7 @@ const loadPie = (book, index) => {
 			  return d3.ascending(Math.random(), Math.random());
 		  })
 			.transition().duration(500)
-			.style('top', function(d, i) { return 100 + ((i*20)) + "px"; } );
+			.style('top', function(d, i) { return 130 + ((i*20)) + "px"; } );
 
 		});
 }
