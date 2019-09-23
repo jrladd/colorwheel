@@ -81,6 +81,8 @@ span.brown {color: #884513; font-weight: bold; }
 <script>
 /*This code adapted from Mike Bostock's Dispatching Events example: https://bl.ocks.org/mbostock/5872848*/
 
+var all_lines = [];
+
 d3.select('.help-button').on("click", function() {
 	d3.select('.overlay').classed("show", true);
 	d3.select('.overlay').classed("hide", false);
@@ -192,19 +194,14 @@ const loadPie = (book, index) => {
 
     /* On click, show all lines for that color. Transition and random sort on subsequent clicks. */
     path.on("click", function(c) {
-			var current_lines = d3.selectAll('div.line')[0].map(function(d) {return d.__data__});
-			// .length;
-			console.log(current_lines);
-			var new_lines = book['lines'][c['data']]
-			var all_lines = current_lines.concat(new_lines);
-			var re = /class=\'(.*)\'/
-			var found = all_lines.map(function(a) { return a.match(re)[1]; });
-			console.log(_.countBy(found));
-			var random = _.sample(all_lines, 14)
+			// var current_lines = d3.selectAll('div.line')[0].map(function(d) {return d.__data__});
+			// // .length;
+			// console.log(current_lines);
+			random_lines = get_random(book, c);
 			// console.log(random);
 			d3.selectAll('div.line').remove();
 		var lines = d3.select('div.col2').selectAll('div.line')
-			.data(random, function(d) { return d; })
+			.data(random_lines, function(d) { return d; })
 			.enter().append('div')
 			.attr('class', 'line')
 		//	.style('top', function(d, i) { return 10 + ((i*30)) + "px"; } )
@@ -223,6 +220,27 @@ const loadPie = (book, index) => {
 function type(d) {
   d.total = d3.sum(groups, function(k) { return d[k] = +d[k]; });
   return d;
+}
+
+function get_random(book, c) {
+	var new_lines = book['lines'][c['data']]
+	all_lines = all_lines.concat(new_lines);
+	var total_lines = lines.length;
+	var re = /class=\'(.*)\'/
+	var lines_by_color = _.groupBy(all_lines, (a) => { return a.match(re)[1]; });
+	var random = [];
+	var number_of_colors = Object.keys(lines_by_color).length;
+	for (var l in lines_by_color) {
+		console.log(lines_by_color[l])
+		if (number_of_colors == 1) {
+			count = 14;
+		} else {
+			
+			count = 14/number_of_colors; }
+		_.sample(lines_by_color[l], count).forEach(s => { random.push(s); });
+	}
+	console.log(random);
+	return random;
 }
 
 </script>
