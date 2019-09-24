@@ -93,23 +93,25 @@ d3.select('.overlay').on("click", function() {
 })
 var dispatch = d3.dispatch("load", "statechange");
 
-// d3.select(".col2").append("div")
-// 	.text("Shuffle")
-// 	.style("top", "100px")
-// 	.classed("tc", true)
-// 	.on("click", function() {
-// 		d3.selectAll("div.line").sort(function(a,b) {
-// 			return d3.ascending(Math.random(), Math.random());
-// 		}).transition().duration(500).style('top', function(d, i) { return 130 + ((i*20)) + "px"; } );
-// 	});
-//
-// d3.select(".col2").append('div')
-// 		.text('Clear')
-// 	// .attr('text-anchor', 'middle')
-// 	// .attr('transform', 'translate('+ 0 + "," + 30 + ")")
-// 	.on("click", function() {
-// 		d3.selectAll("div.line").remove();
-// 	});
+d3.select(".col2").append("div")
+	.text("Shuffle")
+	.style("top", "100px")
+	.classed("absolute i pointer", true)
+	.on("click", function() {
+		d3.selectAll("div.line").sort(function(a,b) {
+			return d3.ascending(Math.random(), Math.random());
+		}).transition().duration(500).style('top', function(d, i) { return 130 + ((i*20)) + "px"; } );
+	});
+
+d3.select(".col2").append('div')
+	.text('Clear')
+	.style("top", "100px")
+	.style("left", "70px")
+	.classed("absolute i pointer", true)
+	.on("click", function() {
+		d3.selectAll("div.line").remove();
+		all_lines = [];
+	});
 
 var groups = [
   "red",
@@ -145,7 +147,6 @@ d3.json('line_data.json', function(error, texts) {
 	fixed_texts.forEach((f,i) => {
 		loadPie(f,i+1);
 	})
-	// loadPie(fixed_texts[0], 1);
 });
 
 // A pie chart to show number of lines by color; uses the "pie" namespace.
@@ -194,17 +195,12 @@ const loadPie = (book, index) => {
 
     /* On click, show all lines for that color. Transition and random sort on subsequent clicks. */
     path.on("click", function(c) {
-			// var current_lines = d3.selectAll('div.line')[0].map(function(d) {return d.__data__});
-			// // .length;
-			// console.log(current_lines);
 			random_lines = get_random(book, c);
-			// console.log(random);
 			d3.selectAll('div.line').remove();
 		var lines = d3.select('div.col2').selectAll('div.line')
 			.data(random_lines, function(d) { return d; })
 			.enter().append('div')
 			.attr('class', 'line')
-		//	.style('top', function(d, i) { return 10 + ((i*30)) + "px"; } )
 			.html( function(d, i) {return d;})
 
 		d3.selectAll('div.line').sort(function(a,b) {
@@ -225,21 +221,15 @@ function type(d) {
 function get_random(book, c) {
 	var new_lines = book['lines'][c['data']]
 	all_lines = all_lines.concat(new_lines);
-	var total_lines = lines.length;
+	var total_lines = all_lines.length;
 	var re = /class=\'(.*)\'/
 	var lines_by_color = _.groupBy(all_lines, (a) => { return a.match(re)[1]; });
 	var random = [];
-	var number_of_colors = Object.keys(lines_by_color).length;
 	for (var l in lines_by_color) {
-		console.log(lines_by_color[l])
-		if (number_of_colors == 1) {
-			count = 14;
-		} else {
-			
-			count = 14/number_of_colors; }
+		var count = (lines_by_color[l].length/total_lines)*14
+		if (count < 1) { count = 1; }
 		_.sample(lines_by_color[l], count).forEach(s => { random.push(s); });
 	}
-	console.log(random);
 	return random;
 }
 
