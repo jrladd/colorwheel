@@ -27,10 +27,8 @@ text {
 /* .col1 {width: 600px; float: left;}
 .col2 {width: 400px; float: left;} */
 .col1 {
-	top: 100px;
 	z-index: -1;
 }
-.col2 {left: 50%;}
 .line {position: absolute;}
 span.red {color: #AA1100; font-weight: bold; }
 span.yellow {color: #FFBB11; font-weight: bold; }
@@ -60,21 +58,37 @@ span.brown {color: #884513; font-weight: bold; }
 	z-index: 10;
 }
 
+.sticky {
+	top: 0;
+	position: -webkit-sticky;
+	position: sticky;
+	z-index: 0;
+}
+
+.sticky-lower {
+	top: 60px;
+	position: -webkit-sticky;
+	position: sticky;
+	z-index: 0;
+}
+
 </style>
 </head>
-<body class="dark-gray bg-light-gray">
 
-	<div class="pv4 w-100 h-100 absolute overlay hide f3-ns f5 lh-copy light-gray">
+<body class="dark-gray bg-light-gray vh-100">
+
+	<div class="pv4-ns pv2 ph6-ns ph3 w-100 h-100 fixed overlay hide f3-ns f5 lh-copy light-gray">
 		<p class="f2-ns f4 lh-title tc w-100">What is this?</p>
-		<p class="ph6">Using color words from WordNet, this data visualization finds all lines that include a color term in The Faerie Queene (and, for comparison, in A Midsummer Night's Dream) and displays that data in a pie graph.
+		<p>Using color words from WordNet, this data visualization finds all lines that include a color term in The Faerie Queene (and, for comparison, in A Midsummer Night's Dream) and displays that data in a pie graph.
 
-		<p class="ph6">When a user clicks on a color in the pie graph, the lines for that color are displayed. They can then select multiple colors, and the visualization will randomly reorder the lines, creating new, evocative color poems. Using the dropdowns for each Book of the epic, the user can create poems that combine all the "red" lines from Book 1 with all the "green" lines from Book 4 and so on.</p>
+		<p>When a user clicks on a color in the pie graph, the lines for that color are displayed. They can then select multiple colors, and the visualization will randomly reorder the lines, creating new, evocative color poems. Using the dropdowns for each Book of the epic, the user can create poems that combine all the "red" lines from Book 1 with all the "green" lines from Book 4 and so on.</p>
 	</div>
-	<div class="fl w1 help-button pa1 pointer fixed"><i class="fas fa-info-circle"></i></div>
-	<div class="fl w-100 f1 lh-title tc fixed bg-light-gray">Spenser's Color Wheel</div>
 
-	<div class="fl col1 w-50 relative"></div>
-	<div class="fl col2 w-50 fixed"></div>
+	<div class="fl w-100 f1 lh-title tc sticky bg-light-gray db">Spenser's Color Wheel</div>
+	<div class="w1 help-button pa1 pointer fixed"><i class="fas fa-info-circle"></i></div>
+
+	<div class="fl col1 w-50-ns"></div>
+	<div class="fl col2 w-50-ns sticky-lower"></div>
 <!-- <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script> -->
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="https://unpkg.com/underscore@1.9.1/underscore.js"></script>
@@ -93,21 +107,24 @@ d3.select('.overlay').on("click", function() {
 })
 var dispatch = d3.dispatch("load", "statechange");
 
-d3.select(".col2").append("div")
+d3.select(".col2")
+	.classed("overlay light-gray", function() {
+		if (screen.width < 700) {
+			return true;
+		}
+	})
+	.append("div")
 	.text("Shuffle")
-	.style("top", "100px")
-	.classed("absolute i pointer", true)
+	.classed("i pointer fl w-20", true)
 	.on("click", function() {
 		d3.selectAll("div.line").sort(function(a,b) {
 			return d3.ascending(Math.random(), Math.random());
-		}).transition().duration(500).style('top', function(d, i) { return 130 + ((i*20)) + "px"; } );
+		}).transition().duration(500).style('top', function(d, i) { return 40 + ((i*20)) + "px"; } );
 	});
 
 d3.select(".col2").append('div')
 	.text('Clear')
-	.style("top", "100px")
-	.style("left", "70px")
-	.classed("absolute i pointer", true)
+	.classed("i pointer fl w-20", true)
 	.on("click", function() {
 		d3.selectAll("div.line").remove();
 		all_lines = [];
@@ -141,8 +158,6 @@ d3.json('line_data.json', function(error, texts) {
 		textById[d] = type(textById[d]);
 		});
 	});
-	// dispatch.load(textById, texts);
-	// console.log(textById);
 	fixed_texts = Object.values(textById).slice(1);
 	fixed_texts.forEach((f,i) => {
 		loadPie(f,i+1);
@@ -207,7 +222,15 @@ const loadPie = (book, index) => {
 			  return d3.ascending(Math.random(), Math.random());
 		  })
 			.transition().duration(500)
-			.style('top', function(d, i) { return 130 + ((i*20)) + "px"; } );
+			.style('top', function(d, i) {
+				console.log(screen.width);
+				if (screen.width > 700) {
+				return 40 + ((i*20)) + "px"; }
+			})
+			.style('bottom', function(d, i) {
+				if (screen.width < 700) {
+				return 40 + ((i*20)) + "px"; }
+			})
 
 		});
 }
