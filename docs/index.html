@@ -59,20 +59,6 @@ span.brown {color: #884513; font-weight: bold; }
 	z-index: 10;
 }
 
-.sticky {
-	top: 0;
-	position: -webkit-sticky;
-	position: sticky;
-	z-index: 0;
-}
-
-/* .sticky-lower {
-	top: 60px;
-	position: -webkit-sticky;
-	position: sticky;
-	z-index: 0;
-} */
-
 .col2 {
 	top: 60px;
 	left: 50%;
@@ -86,9 +72,6 @@ span.brown {color: #884513; font-weight: bold; }
   }
 	.col1 {
 		margin-top: 92%;
-	}
-	.sticky {
-		position: fixed;
 	}
 }
 
@@ -104,10 +87,10 @@ span.brown {color: #884513; font-weight: bold; }
 		<p>When a user clicks on a color in the pie graph, the lines for that color are displayed. They can then select multiple colors, and the visualization will randomly reorder the lines, creating new, evocative color poems. Using the dropdowns for each Book of the epic, the user can create poems that combine all the "red" lines from Book 1 with all the "green" lines from Book 4 and so on.</p>
 	</div>
 
-	<div class="fl w-100 f1-ns f3 lh-title tc sticky bg-light-gray db">Spenser's Color Wheel</div>
+	<div class="fl w-100 f1-ns f3 lh-title tc fixed bg-light-gray db">Spenser's Color Wheel</div>
 	<div class="w1 help-button pa1 pointer fixed"><i class="fas fa-info-circle"></i></div>
 
-	<div class="fl col1 w-50-ns vh-100"></div>
+	<div class="fl col1 w-50-ns vh-100 mt5"></div>
 	<div class="fl col2 w-50-ns w-100 fixed bg-light-gray">
 		<div class="i">Click some colors to create a poem.</div>
 	</div>
