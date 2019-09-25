@@ -66,19 +66,23 @@ span.brown {color: #884513; font-weight: bold; }
 	z-index: 0;
 }
 
-.sticky-lower {
+/* .sticky-lower {
 	top: 60px;
 	position: -webkit-sticky;
 	position: sticky;
 	z-index: 0;
-}
+} */
 
+.col2 {
+	top: 60px;
+	left: 50%;
+	height: 320px;
+}
 @media only screen and (max-width: 600px) {
   .col2 {
-    position: fixed;
-		/* position: -webkit-sticky; */
 		top: 30px;
 		height: 320px;
+		left: 0;
   }
 	.col1 {
 		margin-top: 92%;
@@ -104,7 +108,7 @@ span.brown {color: #884513; font-weight: bold; }
 	<div class="w1 help-button pa1 pointer fixed"><i class="fas fa-info-circle"></i></div>
 
 	<div class="fl col1 w-50-ns vh-100"></div>
-	<div class="fl col2 w-50-ns w-100 sticky-lower bg-light-gray">
+	<div class="fl col2 w-50-ns w-100 fixed bg-light-gray">
 		<div class="i">Click some colors to create a poem.</div>
 	</div>
 <!-- <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script> -->
@@ -160,13 +164,14 @@ var groups = [
   "brown"
 ];
 
-d3.json('line_data.json', function(error, texts) {
+d3.json('new_line_data.json', function(error, texts) {
 	var books = d3.keys(texts);
 	textById = d3.map()
 	books.forEach(function(d) {
 		textById[d] = {};
 		textById[d]['id'] = d;
 		textById[d]['lines'] = {};
+		textById[d]['total_lines'] = texts[d]['total']
 		groups.forEach(function(k) {
 		if (texts[d].hasOwnProperty(k)) {
 			textById[d][k] = texts[d][k].length;
@@ -177,17 +182,23 @@ d3.json('line_data.json', function(error, texts) {
 		});
 	});
 	fixed_texts = Object.values(textById).slice(1);
+	var size = d3.scale.linear()
+		.domain([d3.min(fixed_texts, function(d) { return d.total_color/d.total_lines; }), d3.max(fixed_texts, function(d) { return d.total_color/d.total_lines; })])
+		.range([100,150]);
 	fixed_texts.forEach((f,i) => {
-		loadPie(f,i+1);
+		loadPie(f, i+1, size);
 	})
 });
 
+
+
 // A pie chart to show number of lines by color; uses the "pie" namespace.
-const loadPie = (book, index) => {
+const loadPie = (book, index, size) => {
+
 
   var width = 300,
       height = 300,
-      radius = book.total;
+      radius = size(book.total_color/book.total_lines);
 
   var color = d3.scale.ordinal()
       .domain(groups)
@@ -201,8 +212,14 @@ const loadPie = (book, index) => {
       .sort(null);
 
   var container = d3.select(".col1").append("div")
-		.classed("row"+index+" fl w-100 tc mv3 i", true)
-	container.append("div").text(book.id);
+		.classed("row"+index+" fl w-100 tc mv3", true)
+	container.append("div").html(function() {
+		if (book.id.substring(0,8) === "<i>The F") {
+			return book.id;
+		} else {
+			return book.id.split(",")[0] + ", " + book.id.split(" ")[4];
+		}
+	});
 
 	var svg = container.append("svg")
       .attr("width", radius*2)
@@ -241,21 +258,15 @@ const loadPie = (book, index) => {
 		  })
 			.transition().duration(500)
 			.style('top', function(d, i) {
-				// console.log(screen.width);
-				// if (screen.width > 700) {
 				return 40 + ((i*20)) + "px"; //}
 			})
-			// .style('bottom', function(d, i) {
-			// 	if (screen.width < 700) {
-			// 	return 40 + ((i*20)) + "px"; }
-			// })
 
 		});
 }
 
 
 function type(d) {
-  d.total = d3.sum(groups, function(k) { return d[k] = +d[k]; });
+  d.total_color = d3.sum(groups, function(k) { return d[k] = +d[k]; });
   return d;
 }
 

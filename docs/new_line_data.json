@@ -1,0 +1,710 @@
+{
+    "<i>The Faerie Queene</i>, Book 1": {
+        "black": [
+            "A gushing river of <span class='black'>black</span> goarie blood",
+            "Dost thou sit wailing by <span class='black'>black</span> Stygian lake",
+            "Bespotted all with shields of red and <span class='black'>black</span>",
+            "An aged Sire in long <span class='black'>black</span> weeds clad",
+            "Her twyfold Teme of which two <span class='black'>black</span> as pitch",
+            "And in a foul <span class='black'>black</span> pitchy mantle clad",
+            "Deformed monsters fowl and <span class='black'>black</span> as ink",
+            "A stream of coal <span class='black'>black</span> blood forth gushed from her corpse",
+            "And coal-<span class='black'>black</span> steeds yborn of hellish brood",
+            "Enwrapped in coal-<span class='black'>black</span> clouds and filthy smoke",
+            "Arrayed in habit <span class='black'>black</span> and amiss thin",
+            "A flood of poison horrible and <span class='black'>black</span>",
+            "And over all a <span class='black'>black</span> stole she did throw",
+            "Whiles sad Night over him her mantle <span class='black'>black</span> doth spread",
+            "Cast a <span class='black'>black</span> stole most like to seem for Vna fit",
+            "Her coal-<span class='black'>black</span> curtain over brightest sky",
+            "The <span class='black'>black</span> infernal Furies done aslake",
+            "Under <span class='black'>black</span> stole hiding her baited hook",
+            "Who with her <span class='black'>sable</span> mantle 'gan to shade",
+            "He bade awake <span class='black'>black</span> Pluto's grisly Dame",
+            "Who rough and <span class='black'>black</span> and filthy did appear",
+            "A stream of <span class='black'>coal black</span> blood forth gushed from her corpse"
+        ],
+        "blond": [
+            "And faint through loss of <span class='blond'>blond</span> moved not at all"
+        ],
+        "blue": [
+            "Her out of careless swoon Her eyelids <span class='blue'>blue</span>",
+            "Was clad in <span class='blue'>blue</span> that her beseemed well"
+        ],
+        "brown": [
+            "And two were <span class='brown'>brown</span> yet each to each unlich"
+        ],
+        "gray": [
+            "And <span class='gray'>silver</span> Cynthia waxed pale and faint",
+            "His feet all bare his beard all hoary <span class='gray'>grey</span>",
+            "That seemed like silk and <span class='gray'>silver</span> woven near",
+            "But neither silk nor <span class='gray'>silver</span> therein did appear",
+            "From which fast trickled forth a <span class='gray'>silver</span> flood",
+            "How ill it fits with that same <span class='gray'>silver</span> head",
+            "Upon her arm a <span class='gray'>silver</span> anchor lay",
+            "Upon her <span class='gray'>silver</span> anchor as was meet",
+            "The other all with <span class='gray'>silver</span> overcast",
+            "Their arms abroad with <span class='gray'>grey</span> moss overcast",
+            "Y clad in mighty arms and <span class='gray'>silver</span> shield",
+            "He was an aged sire all hoary <span class='gray'>grey</span>",
+            "His <span class='gray'>silver</span> shield now idle masterless",
+            "Where he hath left his plumes all hoary <span class='gray'>grey</span>",
+            "And <span class='gray'>silver</span> shield upon his coward breast",
+            "From whence the river d ye as <span class='gray'>silver</span> clean",
+            "In <span class='gray'>silver</span> dew his ever-drouping head"
+        ],
+        "green": [
+            "Whose carcases were scattered on the <span class='green'>green</span>",
+            "And with <span class='green'>green</span> branches strowing all the ground",
+            "And tremble like a leaf of Aspen <span class='green'>green</span>",
+            "On top of <span class='green'>green</span> Selinis all alone",
+            "Then on her head they set a garland <span class='green'>green</span>",
+            "In <span class='green'>green</span> vine leaves he was right fitly clad",
+            "And thinking of those branches <span class='green'>green</span> to frame",
+            "And their <span class='green'>green</span> leaves trembling with every blast",
+            "She is ybourhgt unto a paled <span class='green'>green</span>",
+            "His dwelling is low in a valley <span class='green'>green</span>",
+            "In a <span class='green'>green</span> gown he clothed was full fair",
+            "As fresh as flowers in meadow <span class='green'>green</span> do grow",
+            "And with <span class='green'>green</span> boughs decking a gloomy glade"
+        ],
+        "purple": [
+            "He gave her gold and <span class='purple'>purple</span> pall to wear",
+            "As fair Aurora in her <span class='purple'>purple</span> pall",
+            "Enforced her <span class='purple'>purple</span> beast with all her might",
+            "And streams of <span class='purple'>purple</span> blood new dies the verdant fields",
+            "And robbed of royal robes and <span class='purple'>purple</span> pall",
+            "Had spread her <span class='purple'>purple</span> robe through dewy air"
+        ],
+        "red": [
+            "And heathenish shield wherein with letters <span class='red'>red</span>",
+            "That much was worn but therein little <span class='red'>red</span>",
+            "That in his armour bore a croslet <span class='red'>red</span>",
+            "Loaden with fruit and apples rosy <span class='red'>red</span>",
+            "From flaming mouth bright sparkles fiery <span class='red'>red</span>",
+            "The <span class='red'>red</span> blood trickling stained the way as he did ride",
+            "That blood-<span class='red'>red</span> billows like a walled front",
+            "Into a pure <span class='red'>vermilion</span> now are died",
+            "His eyes did hurl forth sparkles fiery <span class='red'>red</span>",
+            "That hast my name and nation <span class='red'>red</span> aright",
+            "Bespotted all with shields of <span class='red'>red</span> and black",
+            "A goodly Lady clad in scarlot <span class='red'>red</span>",
+            "As they in pure <span class='red'>vermilion</span> had been died",
+            "Which he disclosing <span class='red'>red</span> thus as the paper spoke",
+            "With rosy cheeks for shame as blushing <span class='red'>red</span>"
+        ],
+        "total": 5572,
+        "white": [
+            "Purfled with gold and <span class='white'>pearl</span> of rich assay",
+            "Upon a lowly Ass more <span class='white'>white</span> than snow",
+            "With princely gifts of <span class='white'>ivory</span> and gold",
+            "She was arrayed all in lily <span class='white'>white</span>",
+            "And old old man with beard as <span class='white'>white</span> as snow",
+            "Her all in <span class='white'>white</span> he clad and over it",
+            "Each <span class='white'>bone</span> might through his body well be read",
+            "Of <span class='white'>pearl</span> and precious stone that earthly tongue",
+            "With sprincled <span class='white'>pearl</span> and gold full richly dressed",
+            "In <span class='white'>ivory</span> sheath ycarued with curious slights",
+            "To pluck a <span class='white'>bone</span> then from his cruel claw",
+            "All lily <span class='white'>white</span> withouten spot or pride",
+            "Of mother <span class='white'>pearl</span> and buckled with a golden tongue",
+            "And by her in a line a milk <span class='white'>white</span> lamb she lad",
+            "Of turtle doves she sitting in an <span class='white'>ivory</span> chair"
+        ],
+        "yellow": [
+            "Ne spared he to give her <span class='yellow'>gold</span> and rings",
+            "Embowd with <span class='yellow'>gold</span> and gorgeous ornament",
+            "With princely gifts of ivory and <span class='yellow'>gold</span>",
+            "He gave her <span class='yellow'>gold</span> and purple pall to wear",
+            "Whose hilts were burnished <span class='yellow'>gold</span> and handle strong",
+            "Purfled with <span class='yellow'>gold</span> and pearl of rich assay",
+            "With royal arras and resplendent <span class='yellow'>gold</span>",
+            "Upon a Camel loaden all with <span class='yellow'>gold</span>",
+            "Those heaps of <span class='yellow'>gold</span> with griple covetise",
+            "Which hung adown his side in twisted <span class='yellow'>gold</span>",
+            "Adorned with <span class='yellow'>gold</span> and jewels shining clear",
+            "And on her head she wore a tire of <span class='yellow'>gold</span>",
+            "But nor for <span class='yellow'>gold</span> nor glee will I abide",
+            "His haughty helmet horrid all with <span class='yellow'>gold</span>",
+            "Weary of aged Tithones <span class='yellow'>saffron</span> bed",
+            "Adorned all with <span class='yellow'>gold</span> and garlands gay",
+            "The rest was all in <span class='yellow'>yellow</span> robes arrayed still",
+            "And in her right hand bore a cup of <span class='yellow'>gold</span>",
+            "In their defence nor would for <span class='yellow'>gold</span> or fee",
+            "With sprincled pearl and <span class='yellow'>gold</span> full richly dressed",
+            "And gorgeous <span class='yellow'>gold</span> arrayed I to thee came",
+            "In glistering <span class='yellow'>gold</span> and peerless precious stone"
+        ]
+    },
+    "<i>The Faerie Queene</i>, Book 2": {
+        "black": [
+            "Enwrapped in fowl smoke and clouds more <span class='black'>black</span> than jet",
+            "More fit amongst <span class='black'>black</span> fiends than men to have his place",
+            "Dead sleeping Poppy and <span class='black'>black</span> Hellebore",
+            "His coal-<span class='black'>black</span> hands did seem to have been seared",
+            "With that <span class='black'>black</span> Palmer his most trusty guide",
+            "But direful deadly <span class='black'>black</span> both leaf and bloom",
+            "In a <span class='black'>black</span> flood which flowed about it round",
+            "To deck his hearse and trap his tomb-<span class='black'>black</span> steed",
+            "With his <span class='black'>black</span> Palmer that him guided still",
+            "A comely Palmer clad in <span class='black'>black</span> attire"
+        ],
+        "blond": [
+            "But his sad father's arms with <span class='blond'>blond</span> defiled"
+        ],
+        "brown": [
+            "Shaked his long locks coloured like <span class='brown'>copper</span>-wire"
+        ],
+        "gray": [
+            "Were made and set in <span class='gray'>silver</span> sockets bright",
+            "But under him a <span class='gray'>grey</span> steed did he wield",
+            "A <span class='gray'>silver</span> sound that heavenly music seemed to make",
+            "Her locks that loathly were and hoary <span class='gray'>grey</span>",
+            "Ne sittest down on that same <span class='gray'>silver</span> stool",
+            "Now hath fair Phoebe with her <span class='gray'>silver</span> face",
+            "How oft do they their <span class='gray'>silver</span> bowers leave",
+            "Bright Scolopendraes' armed with <span class='gray'>silver</span> scales",
+            "Of ripest years and hairs all hoary <span class='gray'>grey</span>",
+            "Fountains of gold and <span class='gray'>silver</span> to abound",
+            "And the <span class='gray'>grey</span> Ocean into purple die",
+            "So pure and shiny that the <span class='gray'>silver</span> flood",
+            "And in the midst thereof a <span class='gray'>silver</span> seat",
+            "That themselves dipping in the <span class='gray'>silver</span> dew",
+            "The <span class='gray'>silver</span> sounding instruments did meet",
+            "All in a vele of silk and <span class='gray'>silver</span> thin",
+            "Upright he road and in his <span class='gray'>silver</span> shield"
+        ],
+        "green": [
+            "Till that they come unto a forest <span class='green'>green</span>",
+            "The <span class='green'>green</span> shield died in dolorous vermell",
+            "Of swift Eurotas or on Cynthus <span class='green'>green</span>",
+            "With grassy <span class='green'>green</span> of delectable hue",
+            "Snatched first the one and then the other <span class='green'>jade</span>",
+            "Whom all the people deck with garlands <span class='green'>green</span>",
+            "So fortune wrought as under <span class='green'>green</span> woods side",
+            "The gentlest knight that ever on <span class='green'>green</span> grass",
+            "With nature did an Arbour <span class='green'>green</span> dispred",
+            "And with <span class='green'>green</span> mode covering her nakedness"
+        ],
+        "purple": [
+            "And the clean waves with <span class='purple'>purple</span> gold did ray",
+            "That underneath his feet soon made a <span class='purple'>purple</span> plesh",
+            "In a long <span class='purple'>purple</span> pall whose skirt with gold",
+            "Soon as the morrow fair with <span class='purple'>purple</span> beams",
+            "And the grey Ocean into <span class='purple'>purple</span> die",
+            "That a large <span class='purple'>purple</span> stream a down their giambeux falls",
+            "And <span class='purple'>purple</span> robe gored with many a wound"
+        ],
+        "red": [
+            "His pricking arms entrayld with roses <span class='red'>red</span>",
+            "all 's when his brother saw the <span class='red'>red</span> blood rail",
+            "At th' upper end there sat clad in <span class='red'>red</span>",
+            "Some as the Rubine laughing sweetly <span class='red'>red</span>",
+            "And in her cheeks the vermeill <span class='red'>red</span> did show",
+            "Deep in his flesh and opened wide a <span class='red'>red</span> floodgate",
+            "His ruddy lips did smile and rosy <span class='red'>red</span>",
+            "Out of the wound the <span class='red'>red</span> blood flowed fresh",
+            "With fair <span class='red'>vermilion</span> or pure lastery",
+            "His steed was bloody <span class='red'>red</span> and fomedire",
+            "And ever and anon with rosy <span class='red'>red</span>",
+            "Are decked with blossoms died in white and <span class='red'>red</span>",
+            "And into a deep <span class='red'>sanguine</span> died the grassy ground"
+        ],
+        "total": 6238,
+        "white": [
+            "That in his hand a <span class='white'>white</span> rod managed",
+            "In whose <span class='white'>white</span> alabaster breast did stick",
+            "All in a silken Camus lylly <span class='white'>white</span>",
+            "It framed was of precious <span class='white'>ivory</span>",
+            "And th' <span class='white'>ivory</span> in golden mantle gownd",
+            "And bared all his head unto the <span class='white'>bone</span>",
+            "Branched with gold & <span class='white'>pearl</span> most richly wrought",
+            "Learning his ship from those <span class='white'>white</span> rocks to save",
+            "That hide no whit her <span class='white'>alabaster</span> skin",
+            "Or <span class='white'>ivory</span> into the waves were sent",
+            "That her became as polished <span class='white'>ivory</span>",
+            "Are decked with blossoms died in <span class='white'>white</span> and red",
+            "But rather showed more <span class='white'>white</span> if more might be",
+            "That seemed the waves were into <span class='white'>ivory</span>",
+            "In whose white <span class='white'>alabaster</span> breast did stick",
+            "Her <span class='white'>ivory</span> forehead full of bounty brave",
+            "In robe of lily <span class='white'>white</span> she was arrayed"
+        ],
+        "yellow": [
+            "In her left hand a Cup of <span class='yellow'>gold</span> she held",
+            "She held a great <span class='yellow'>gold</span> chain ylincked well",
+            "Branched with <span class='yellow'>gold</span> & pearl most richly wrought",
+            "And them amongst some were of burnished <span class='yellow'>gold</span>",
+            "Fountains of <span class='yellow'>gold</span> and silver to abound",
+            "Therefore he first wore crown of <span class='yellow'>gold</span> for dignity",
+            "Such seemed they and so their <span class='yellow'>yellow</span> hear",
+            "And planted there did bring forth fruit of <span class='yellow'>gold</span>",
+            "Both roof and floor and walls were all of <span class='yellow'>gold</span>",
+            "Embossed with massy <span class='yellow'>gold</span> of glorious gift",
+            "Thy works for wealth and life for <span class='yellow'>gold</span> engage",
+            "That service well Her <span class='yellow'>yellow</span> golden hair",
+            "With silken curtains and <span class='yellow'>gold</span> coverlets",
+            "In a long purple pall whose skirt with <span class='yellow'>gold</span>",
+            "And the clean waves with purple <span class='yellow'>gold</span> did ray",
+            "And over all of purest <span class='yellow'>gold</span> was spread",
+            "To a broad gate all built of beaten <span class='yellow'>gold</span>",
+            "Why takest not of that same fruit of <span class='yellow'>gold</span>",
+            "Great heaps of <span class='yellow'>gold</span> that never could be spent",
+            "Was underneath enueloped with <span class='yellow'>gold</span>",
+            "Or where hast thou thy wonne that so much <span class='yellow'>gold</span>",
+            "Yet <span class='yellow'>gold</span> all is not that doth golden seem",
+            "Her <span class='yellow'>yellow</span> locks crisped like golden wire",
+            "And otherwhiles with <span class='yellow'>gold</span> besprinkeled"
+        ]
+    },
+    "<i>The Faerie Queene</i>, Book 3": {
+        "black": [
+            "By strong enchantments and <span class='black'>black</span> Magic lere",
+            "Her covered with her <span class='black'>sable</span> vestiment",
+            "His mother was the <span class='black'>black</span>-browed Cymoent",
+            "Grief all in <span class='black'>sable</span> sorrowfully clad",
+            "As white seems fairer matched with <span class='black'>black</span> atone",
+            "Thy dwelling is in Herebus <span class='black'>black</span> house",
+            "And under the <span class='black'>black</span> vele of guilty Night",
+            "Under thy mantle <span class='black'>black</span> there hidden lie"
+        ],
+        "blue": [
+            "And through the perceant air shoot forth their <span class='blue'>azure</span> streams",
+            "That decked the <span class='blue'>azure</span> field with her fair powdered skin",
+            "He up 'gan lift toward the <span class='blue'>azure</span> skies",
+            "She bathed with roses red and violets <span class='blue'>blue</span>"
+        ],
+        "gray": [
+            "Their watchet mantles frindgd with <span class='gray'>silver</span> round",
+            "With price of <span class='gray'>silver</span> shall his kingdom buy",
+            "Was drawn forth and in <span class='gray'>silver</span> basin laid",
+            "Her <span class='gray'>silver</span> buskins from her nimble thigh",
+            "Without adorn of gold or <span class='gray'>silver</span> bright",
+            "Did shine with <span class='gray'>silver</span> and shoot forth his beam",
+            "In <span class='gray'>silver</span> sockets shining like the skies",
+            "Now Bacchus' fruit out of the <span class='gray'>silver</span> plate",
+            "Fast flying on a Courser dapled <span class='gray'>grey</span>",
+            "Breaks forth her <span class='gray'>silver</span> beams and her bright head"
+        ],
+        "green": [
+            "And breaking quite his garland ever <span class='green'>green</span>",
+            "Planted with myrtle trees and laurels <span class='green'>green</span>",
+            "Mantled with <span class='green'>green</span> itself did spredden wide",
+            "To have be sprinkled all the grassy <span class='green'>green</span>",
+            "His tyreling <span class='green'>jade</span> he fiercely forth did push",
+            "And the <span class='green'>green</span> grass that groweth they shall brens",
+            "Through the <span class='green'>green</span> grass his long bright burnished back declares",
+            "That spear enchanted was which laid thee on the <span class='green'>green</span>",
+            "And with their horned feet the <span class='green'>green</span> grass wore"
+        ],
+        "purple": [
+            "That drops of <span class='purple'>purple</span> blood thereout did weep",
+            "Sad Amaranthus in whose <span class='purple'>purple</span> gore"
+        ],
+        "red": [
+            "Which did her lily smock with stains of <span class='red'>vermilion</span> steep",
+            "But in his eye his meaning wisely <span class='red'>red</span>",
+            "She bathed with roses <span class='red'>red</span> and violets blue",
+            "That died in <span class='red'>sanguine</span> red her skin all snowy clean",
+            "With breathed flames like to a furnace <span class='red'>red</span>",
+            "That died in sanguine <span class='red'>red</span> her skin all snowy clean",
+            "And ever and anon the rosy <span class='red'>red</span>",
+            "And of herself her name Belphoebe <span class='red'>red</span>",
+            "Whose sides empurpled were with smiling <span class='red'>red</span>",
+            "Spoilt of their rosy <span class='red'>red</span> were waxed pale and wan",
+            "That like a lively <span class='red'>sanguine</span> it seemed to the eye",
+            "Be hold she oft and oft it over-<span class='red'>red</span>"
+        ],
+        "total": 6183,
+        "white": [
+            "As <span class='white'>white</span> seems fairer matched with black atone",
+            "Dropped adown upon her <span class='white'>ivory</span> breast",
+            "And eke through fear as <span class='white'>white</span> as whales bone",
+            "Upon a milk-<span class='white'>white</span> Palfrey all alone",
+            "Gold amber <span class='white'>ivory</span> pearls ouches rings",
+            "Her breast all naked as net <span class='white'>ivory</span>",
+            "Upon that milk-<span class='white'>white</span> Palfreyes' carcase fed",
+            "And eke through fear as white as whales <span class='white'>bone</span>",
+            "Stretch her <span class='white'>white</span> rod over the Belgic shore",
+            "And on a Palfrey rides more <span class='white'>white</span> than snow",
+            "And flame with gold but the <span class='white'>white</span> foamy cream",
+            "And her <span class='white'>white</span> Palfrey having conquered",
+            "Was all abashed and her pure <span class='white'>ivory</span>"
+        ],
+        "yellow": [
+            "All fretted round with <span class='yellow'>gold</span> and goodly well beseen",
+            "And round about yfretted all with <span class='yellow'>gold</span>",
+            "That glistred all with <span class='yellow'>gold</span> and glorious show",
+            "Of massy <span class='yellow'>gold</span> which with his own light shone",
+            "Yet golden wire was not so <span class='yellow'>yellow</span> thrice",
+            "That love's his fetters though they were of <span class='yellow'>gold</span>",
+            "That fame in trump of <span class='yellow'>gold</span> eternally displays",
+            "Gold <span class='yellow'>amber</span> ivory pearls ouches rings",
+            "Without adorn of <span class='yellow'>gold</span> or silver bright",
+            "And her fair locks were woven up in <span class='yellow'>gold</span>",
+            "And flame with <span class='yellow'>gold</span> but the white foamy cream",
+            "The one of iron the other of bright <span class='yellow'>gold</span>",
+            "Some headed with sad lead some with pure <span class='yellow'>gold</span>",
+            "For <span class='yellow'>gold</span> or pearls or precious stones an hour",
+            "Woven with <span class='yellow'>gold</span> and silk so close and ne'er",
+            "In stead of <span class='yellow'>yellow</span> locks she did device",
+            "Her garments all were wrought of beaten <span class='yellow'>gold</span>",
+            "But with pure <span class='yellow'>gold</span> it all was overlaid",
+            "That was with <span class='yellow'>gold</span> and Ermines fair enueloped",
+            "And her fair <span class='yellow'>yellow</span> locks behind her flew",
+            "Royally clad quoth he in cloth of <span class='yellow'>gold</span>"
+        ]
+    },
+    "<i>The Faerie Queene</i>, Book 4": {
+        "black": [
+            "Full <span class='black'>black</span> and grisly did his face appear",
+            "A stream of coal-<span class='black'>black</span> blood thence gushed amain"
+        ],
+        "blue": [
+            "His foe was soon addressed the trumpets freshly <span class='blue'>blue</span>",
+            "And also those which won in th' <span class='blue'>azure</span> sky",
+            "A trumpet <span class='blue'>blue</span> they both together met",
+            "Triton his trumpet shrill before them <span class='blue'>blue</span>"
+        ],
+        "gray": [
+            "The next the stubborn Newre whose waters <span class='gray'>grey</span>",
+            "As with a robe with her own <span class='gray'>silver</span> hair",
+            "With <span class='gray'>silver</span> streams amongst the linen strayed",
+            "Deawed with <span class='gray'>silver</span> drops that trickled down always",
+            "Her <span class='gray'>silver</span> feet fair washed against this day",
+            "The chalky Kenet and the Thetis <span class='gray'>grey</span>",
+            "The <span class='gray'>grey</span> eyed Doris all which fifty are",
+            "With head all hoary and his beard all <span class='gray'>grey</span>",
+            "His <span class='gray'>silver</span> Harp in hand and shortly friends them make",
+            "Deawed with <span class='gray'>silver</span> drops through sweeting sore",
+            "That seemed like <span class='gray'>silver</span> sprinkled here and there"
+        ],
+        "green": [
+            "His waist was with a wreath of ivy <span class='green'>green</span>",
+            "Fresh Alimeda decked with garland <span class='green'>green</span>",
+            "All goodly damsels decked with long <span class='green'>green</span> hair",
+            "As plain as at the first when they were fresh and <span class='green'>green</span>"
+        ],
+        "purple": [
+            "And poured the <span class='purple'>purple</span> blood forth on the grass",
+            "That all the ground with <span class='purple'>purple</span> blood was sprent",
+            "Thence streams of <span class='purple'>purple</span> blood issuing rife",
+            "With nimble wings of gold and <span class='purple'>purple</span> hue",
+            "At length did mark about her <span class='purple'>purple</span> breast"
+        ],
+        "red": [
+            "That through the cliffs the <span class='red'>vermilion</span> blood out spun"
+        ],
+        "total": 5421,
+        "white": [
+            "With <span class='white'>pearl</span> & precious stone worth many a mark",
+            "The which was all in lily <span class='white'>white</span> arrayed",
+            "Powdered with <span class='white'>pearl</span> and stone and all her gown",
+            "Whose <span class='white'>ivory</span> shoulders weren covered all",
+            "Fairest Pherusa Phao lily <span class='white'>white</span>",
+            "And all the others pavement were with <span class='white'>ivory</span> spilt"
+        ],
+        "yellow": [
+            "Unto the vulgar for good <span class='yellow'>gold</span> instead",
+            "Yet quail in conquest of that land of <span class='yellow'>gold</span>",
+            "No less than perfect <span class='yellow'>gold</span> surmounts the meanest brass",
+            "With nimble wings of <span class='yellow'>gold</span> and purple hue",
+            "And round about the same her <span class='yellow'>yellow</span> hear",
+            "Enwoven was with <span class='yellow'>gold</span> that taught full low a down",
+            "With <span class='yellow'>gold</span> and many a gorgeous ornament",
+            "Nor shining <span class='yellow'>gold</span> nor mouldering clay it was",
+            "Of <span class='yellow'>gold</span> that bad eyes might it not profane"
+        ]
+    },
+    "<i>The Faerie Queene</i>, Book 5": {
+        "black": [
+            "Enwallowed in his own <span class='black'>black</span> bloody gore",
+            "Within his mouth a <span class='black'>black</span> spot doth appear",
+            "Breathing out clouds of sulphur fowl and <span class='black'>black</span>"
+        ],
+        "blue": [
+            "Her lips were like raw leather pale and <span class='blue'>blue</span>",
+            "As when two suns appear in the <span class='blue'>azure</span> sky"
+        ],
+        "brown": [
+            "Of colour rusty <span class='brown'>brown</span> but sure and strong"
+        ],
+        "gray": [
+            "Like coals that through a <span class='gray'>silver</span> Censer sparkle bright",
+            "Woven upon with <span class='gray'>silver</span> subtly wrought",
+            "The Kingdom's care with a white <span class='gray'>silver</span> head",
+            "And here and there shooting forth <span class='gray'>silver</span> streams",
+            "First ring's his <span class='gray'>silver</span> Bell t' each sleepy wight",
+            "All clad in linen robes with <span class='gray'>silver</span> hemmed",
+            "And royal gifts of gold and <span class='gray'>silver</span> wrought",
+            "The which was framed all of <span class='gray'>silver</span> fine",
+            "Hemmed all about with fringe of <span class='gray'>silver</span> twine",
+            "With golden hands and <span class='gray'>silver</span> feet beside",
+            "And eke her feet those feet of <span class='gray'>silver</span> try"
+        ],
+        "green": [
+            "But scattered all about and strowed upon the <span class='green'>green</span>",
+            "Burnished with bloody rust whiles on the <span class='green'>green</span>",
+            "To him he hath before this Castle <span class='green'>green</span>"
+        ],
+        "purple": [
+            "The morrow next appeared with <span class='purple'>purple</span> hair",
+            "For they were all they say of <span class='purple'>purple</span> hue",
+            "That glancing down his thigh the <span class='purple'>purple</span> blood forth drew",
+            "The which she covering with her <span class='purple'>purple</span> pall",
+            "And all his armour did with <span class='purple'>purple</span> die",
+            "All in a Camis light of <span class='purple'>purple</span> silk"
+        ],
+        "red": [
+            "Her linen stole to robe of <span class='red'>scarlet</span> red",
+            "Decking her cheek with a <span class='red'>vermilion</span> rose",
+            "Nor of aught else that may be richest <span class='red'>red</span>",
+            "The fruitful vine whose liquor bloody <span class='red'>red</span>",
+            "Her linen stole to robe of scarlet <span class='red'>red</span>"
+        ],
+        "total": 5232,
+        "white": [
+            "A bevie of fair Virgins clad in <span class='white'>white</span>",
+            "She stretched forth a long <span class='white'>white</span> slender wand",
+            "And put before his lap a napron <span class='white'>white</span>",
+            "Those he devours they say both flesh and <span class='white'>bone</span>",
+            "Unto the <span class='white'>bone</span> and made a grisly wound",
+            "Of costly <span class='white'>ivory</span> full rich beseen",
+            "Of earthly mould and formed of flesh and <span class='white'>bone</span>",
+            "And quilted upon satin <span class='white'>white</span> as milk",
+            "The Kingdom's care with a <span class='white'>white</span> silver head"
+        ],
+        "yellow": [
+            "Glistering like <span class='yellow'>gold</span> amongst the plights enrolled",
+            "There he that Idol saw of massy <span class='yellow'>gold</span>",
+            "Upon her head she wore a Crown of <span class='yellow'>gold</span>",
+            "Basted with bends of <span class='yellow'>gold</span> on every side",
+            "Not of rich tissue nor of cloth of <span class='yellow'>gold</span>",
+            "For gifts of <span class='yellow'>gold</span> or any worldly glee",
+            "Dearer is love then life and fame than <span class='yellow'>gold</span>",
+            "His Lion's skin changed to a pall of <span class='yellow'>gold</span>",
+            "But he her suppliant hands those hands of <span class='yellow'>gold</span>",
+            "And all their tops bright glittering with <span class='yellow'>gold</span>",
+            "Whilst he to gathering of the <span class='yellow'>gold</span> did fall",
+            "Upon a throne of <span class='yellow'>gold</span> full bright and sheen",
+            "And Moon-like Mitre to a Crown of <span class='yellow'>gold</span>",
+            "And garnished all with <span class='yellow'>gold</span> upon the blade",
+            "With shining <span class='yellow'>gold</span> and arched over head",
+            "Under an heap of <span class='yellow'>gold</span> Thence he her drew",
+            "And royal gifts of <span class='yellow'>gold</span> and silver wrought"
+        ]
+    },
+    "<i>The Faerie Queene</i>, Book 6": {
+        "black": [
+            "With which his locks as <span class='black'>black</span> as pitchy night",
+            "Of these poor folk whose souls with <span class='black'>black</span> dishonour",
+            "His broad <span class='black'>black</span> wings had through the heavens wide"
+        ],
+        "blue": [
+            "Clad all in gilded arms with <span class='blue'>azure</span> band"
+        ],
+        "gray": [
+            "His <span class='gray'>silver</span> waves did softly tumble down",
+            "Whose <span class='gray'>silver</span> locks bedecked his beard and head",
+            "Of lincoln green belayd with <span class='gray'>silver</span> lace",
+            "Where it in <span class='gray'>silver</span> bower does hidden ",
+            "The whiles his Lord in <span class='gray'>silver</span> slumber lay",
+            "But all the night in <span class='gray'>silver</span> sleep I spend"
+        ],
+        "green": [
+            "To the <span class='green'>green</span> wood to gather strawberries",
+            "Of lincoln <span class='green'>green</span> belayd with silver lace",
+            "He durst not enter into th' open <span class='green'>green</span>",
+            "though sitting down by them upon the <span class='green'>green</span>",
+            "Of all that rangeth in the forest <span class='green'>green</span>",
+            "Letting their steeds to graze upon the <span class='green'>green</span>",
+            "Her tyreling <span class='green'>jade</span> was bend her to abuse",
+            "Decked with <span class='green'>green</span> boughs and flowers gay beseen",
+            "Upon a mangy <span class='green'>jade</span> unmeetely set",
+            "Of few <span class='green'>green</span> turfs an altar soon they feigned",
+            "Clad in home-made <span class='green'>green</span> that her own hands had died"
+        ],
+        "purple": [
+            "When he beheld the streams of <span class='purple'>purple</span> blood",
+            "The little <span class='purple'>purple</span> rose which thereon grew",
+            "She moat perceive a little <span class='purple'>purple</span> mould",
+            "That at the last like to a <span class='purple'>purple</span> lake"
+        ],
+        "red": [
+            "And salvage with their blood fresh steaming <span class='red'>red</span>",
+            "Both of his words which he with reason <span class='red'>red</span>",
+            "So taking counsel of a wise man <span class='red'>red</span>"
+        ],
+        "total": 5217,
+        "white": [
+            "Her <span class='white'>ivory</span> neck her alabaster breast",
+            "An hundred naked maiden's lily <span class='white'>white</span>",
+            "Her ivory neck her <span class='white'>alabaster</span> breast",
+            "Like the fair <span class='white'>ivory</span> shining they did see",
+            "Her paps which like <span class='white'>white</span> silken pillows were",
+            "Being unable to digest that <span class='white'>bone</span>",
+            "Upon her <span class='white'>ivory</span> forehead that same day",
+            "Chanced to espy upon her <span class='white'>ivory</span> chest",
+            "Her tender sides her belly <span class='white'>white</span> and clear"
+        ],
+        "yellow": [
+            "The wisest sight to think <span class='yellow'>gold</span> that is bras",
+            "They did esteem and offered store of <span class='yellow'>gold</span>",
+            "Pinked upon <span class='yellow'>gold</span> and paled part per part",
+            "And taking from her hand a ring of <span class='yellow'>gold</span>",
+            "Hailing that maiden by the <span class='yellow'>yellow</span> hear",
+            "So forth he drew much <span class='yellow'>gold</span> and toward him it drive"
+        ]
+    },
+    "<i>The Shepheardes Calender</i>, 100 Januarye": {
+        "black": [
+            "Her mantle <span class='black'>black</span> through heaven 'gan overhaile"
+        ],
+        "total": 78
+    },
+    "<i>The Shepheardes Calender</i>, 101 Februarie": {
+        "gray": [
+            "But now the <span class='gray'>grey</span> moss marred his rind"
+        ],
+        "green": [
+            "With Leaves engrained in lusty <span class='green'>green</span>",
+            "And crowing in pipes made of <span class='green'>green</span> corn",
+            "There grew an aged Tree on the <span class='green'>green</span>",
+            "But were thy years <span class='green'>green</span> as now been mine"
+        ],
+        "red": [
+            "Died in Lily white and Cremsin <span class='red'>red</span>"
+        ],
+        "total": 250,
+        "white": [
+            "Died in Lily <span class='white'>white</span> and Cremsin red"
+        ]
+    },
+    "<i>The Shepheardes Calender</i>, 102 March": {
+        "blue": [
+            "With wings of purple and <span class='blue'>blue</span>"
+        ],
+        "gray": [
+            "And <span class='gray'>silver</span> bow which was but slack"
+        ],
+        "green": [
+            "She might ne gang on the <span class='green'>green</span>"
+        ],
+        "purple": [
+            "With wings of <span class='purple'>purple</span> and blue"
+        ],
+        "total": 121
+    },
+    "<i>The Shepheardes Calender</i>, 103 Aprill": {
+        "gray": [
+            "Show thyself Cyntbia with thy <span class='gray'>silver</span> rays",
+            "Of fair Elisa be your <span class='gray'>silver</span> song"
+        ],
+        "green": [
+            "Ye shepherds daughters that devil on the <span class='green'>green</span>",
+            "See where she sits upon the grassy <span class='green'>green</span>",
+            "And Primroses <span class='green'>green</span>"
+        ],
+        "purple": [
+            "Bring hither the Pink and <span class='purple'>purple</span> Cullambine"
+        ],
+        "total": 167,
+        "white": [
+            "To her will I offer a milk-<span class='white'>white</span> Lamb",
+            "And Ermines <span class='white'>white</span>"
+        ]
+    },
+    "<i>The Shepheardes Calender</i>, 104 Maye": {
+        "green": [
+            "With <span class='green'>green</span> leaves the bushes with bloosming Buds",
+            "Thomas to the <span class='green'>green</span> Wood they speeden him all",
+            "Ylike as others girt in gaudy <span class='green'>green</span>",
+            "Yode forth abroad unto the <span class='green'>green</span> wood"
+        ],
+        "total": 326
+    },
+    "<i>The Shepheardes Calender</i>, 105 June": {
+        "black": [
+            "Here not night Ravene lodge more <span class='black'>black</span> than pitch"
+        ],
+        "gray": [
+            "Renne after hastily thy <span class='gray'>silver</span> sound"
+        ],
+        "total": 121,
+        "white": [
+            "Their <span class='white'>ivory</span> Luyts and Tamburins forgo"
+        ]
+    },
+    "<i>The Shepheardes Calender</i>, 106 Julye": {
+        "purple": [
+            "They been clad in <span class='purple'>purple</span> and pall so hath their god them blessed"
+        ],
+        "total": 118,
+        "white": [
+            "That weening his white head was <span class='white'>chalk</span> a shell fish down let fly",
+            "And sithence shepherd's <span class='white'>bone</span> foresaid from places of delight",
+            "That weening his <span class='white'>white</span> head was chalk a shell fish down let fly"
+        ],
+        "yellow": [
+            "Ygyrt with belts of glitterand <span class='yellow'>gold</span> might they good shepherds been",
+            "And he that strives to touch the stars often stombles at a <span class='yellow'>straw</span>"
+        ]
+    },
+    "<i>The Shepheardes Calender</i>, 107 August": {
+        "gray": [
+            "Well decked in a frock of <span class='gray'>grey</span>",
+            "hay ho <span class='gray'>grey</span> is greet",
+            "Or as Dame Cynthia's <span class='gray'>silver</span> ray",
+            "She home return whose voices <span class='gray'>silver</span> sound"
+        ],
+        "green": [
+            "the <span class='green'>green</span> is for maidens meet",
+            "And in a Kirtle of <span class='green'>green</span> say"
+        ],
+        "total": 198,
+        "yellow": [
+            "so you may buy <span class='yellow'>gold</span> to dear"
+        ]
+    },
+    "<i>The Shepheardes Calender</i>, 108 September": {
+        "black": [
+            "To quite it from the <span class='black'>black</span> bower of sorrow"
+        ],
+        "total": 260
+    },
+    "<i>The Shepheardes Calender</i>, 109 October": {
+        "brown": [
+            "And helms unbruzed wexen daily <span class='brown'>brown</span>"
+        ],
+        "gray": [
+            "The <span class='gray'>silver</span> swan doth sing before her dying day"
+        ],
+        "total": 128,
+        "white": [
+            "That first the <span class='white'>white</span> bear to the stake did bring"
+        ]
+    },
+    "<i>The Shepheardes Calender</i>, 110 Nouember": {
+        "black": [
+            "The blue in <span class='black'>black</span> the green in grey is tinct"
+        ],
+        "blue": [
+            "The <span class='blue'>blue</span> in black the green in grey is tinct"
+        ],
+        "gray": [
+            "The blue in black the green in <span class='gray'>grey</span> is tinct"
+        ],
+        "green": [
+            "The Muses that were want <span class='green'>green</span> bays to wear",
+            "The fields aye fresh the grass aye <span class='green'>green</span>",
+            "The blue in black the <span class='green'>green</span> in grey is tinct"
+        ],
+        "total": 208
+    },
+    "<i>The Shepheardes Calender</i>, 111 December": {
+        "green": [
+            "Harken awhile from thy <span class='green'>green</span> cabinet"
+        ],
+        "total": 160
+    }
+}
