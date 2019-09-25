@@ -72,6 +72,21 @@ span.brown {color: #884513; font-weight: bold; }
 	z-index: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  .col2 {
+    position: fixed;
+		/* position: -webkit-sticky; */
+		top: 30px;
+		height: 320px;
+  }
+	.col1 {
+		margin-top: 92%;
+	}
+	.sticky {
+		position: fixed;
+	}
+}
+
 </style>
 </head>
 
@@ -84,11 +99,13 @@ span.brown {color: #884513; font-weight: bold; }
 		<p>When a user clicks on a color in the pie graph, the lines for that color are displayed. They can then select multiple colors, and the visualization will randomly reorder the lines, creating new, evocative color poems. Using the dropdowns for each Book of the epic, the user can create poems that combine all the "red" lines from Book 1 with all the "green" lines from Book 4 and so on.</p>
 	</div>
 
-	<div class="fl w-100 f1 lh-title tc sticky bg-light-gray db">Spenser's Color Wheel</div>
+	<div class="fl w-100 f1-ns f3 lh-title tc sticky bg-light-gray db">Spenser's Color Wheel</div>
 	<div class="w1 help-button pa1 pointer fixed"><i class="fas fa-info-circle"></i></div>
 
-	<div class="fl col1 w-50-ns"></div>
-	<div class="fl col2 w-50-ns sticky-lower"></div>
+	<div class="fl col1 w-50-ns vh-100"></div>
+	<div class="fl col2 w-50-ns w-100 sticky-lower bg-light-gray">
+		<div class="i">Click some colors to create a poem.</div>
+	</div>
 <!-- <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script> -->
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="https://unpkg.com/underscore@1.9.1/underscore.js"></script>
@@ -108,11 +125,11 @@ d3.select('.overlay').on("click", function() {
 var dispatch = d3.dispatch("load", "statechange");
 
 d3.select(".col2")
-	.classed("overlay light-gray", function() {
-		if (screen.width < 700) {
-			return true;
-		}
-	})
+	// .classed("overlay light-gray", function() {
+	// 	if (screen.width < 700) {
+	// 		return true;
+	// 	}
+	// })
 	.append("div")
 	.text("Shuffle")
 	.classed("i pointer fl w-20", true)
@@ -223,14 +240,14 @@ const loadPie = (book, index) => {
 		  })
 			.transition().duration(500)
 			.style('top', function(d, i) {
-				console.log(screen.width);
-				if (screen.width > 700) {
-				return 40 + ((i*20)) + "px"; }
+				// console.log(screen.width);
+				// if (screen.width > 700) {
+				return 40 + ((i*20)) + "px"; //}
 			})
-			.style('bottom', function(d, i) {
-				if (screen.width < 700) {
-				return 40 + ((i*20)) + "px"; }
-			})
+			// .style('bottom', function(d, i) {
+			// 	if (screen.width < 700) {
+			// 	return 40 + ((i*20)) + "px"; }
+			// })
 
 		});
 }
